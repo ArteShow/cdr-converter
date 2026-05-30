@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CDR Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hi everyone</h1>
+
+<div class="app">
+
+    <div class="sidebar">
+        <h2>CDR Tool</h2>
+
+        <button onclick="showTab('upload')">Upload</button>
+        <button onclick="showTab('convert')">Convert</button>
+        <button onclick="showTab('files')">Files</button>
+        <button onclick="showTab('settings')">Settings</button>
+    </div>
+
+    <div class="main">
+
+        <div id="upload" class="tab active">
+            <h1>Upload File</h1>
+            <div class="box">
+                <input type="file" id="fileInput">
+                <button id="uploadBtn">Upload</button>
+                <p id="uploadStatus"></p>
+            </div>
+        </div>
+
+        <div id="convert" class="tab">
+            <h1>Convert</h1>
+            <div class="box">
+                <select id="tempFiles"></select>
+                <button id="convertBtn">Convert</button>
+                <p id="convertStatus"></p>
+            </div>
+        </div>
+
+        <div id="files" class="tab">
+            <h1>Files</h1>
+
+            <div class="grid">
+                <div class="panel">
+                    <h3>Temp</h3>
+                    <button onclick="loadTempFiles()">Refresh</button>
+                    <ul id="tempList"></ul>
+                </div>
+
+                <div class="panel">
+                    <h3>Output</h3>
+                    <button onclick="loadOutputFiles()">Refresh</button>
+                    <ul id="outputList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings" class="tab">
+            <h1>Settings</h1>
+
+            <div class="box">
+                <label>UI Scale</label>
+                <input type="range" min="80" max="150" value="100" id="scaleSlider">
+                <span id="scaleValue">100%</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="toastContainer"></div>
+
+<script src="script.js"></script>
 </body>
 </html>

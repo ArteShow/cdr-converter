@@ -12,10 +12,16 @@
     <div class="sidebar">
         <h2>CDR Tool</h2>
 
+        <select id="langSelect">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+        </select>
+
         <button onclick="showTab('upload')">Upload</button>
         <button onclick="showTab('convert')">Convert</button>
         <button onclick="showTab('files')">Files</button>
         <button onclick="showTab('settings')">Settings</button>
+        <button onclick="showTab('help')">Help</button>
     </div>
 
     <div class="main">
@@ -66,6 +72,13 @@
             </div>
         </div>
 
+        <div id="help" class="tab">
+            <h1 id="helpTitle">User Manual</h1>
+
+            <div class="box" id="helpBox">
+                
+            </div>
+        </div>
     </div>
 </div>
 

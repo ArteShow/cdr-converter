@@ -122,6 +122,15 @@ button:hover {
     gap: 10px;
 }
 
+#langSelect {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: #1f2937;
+    color: white;
+}  
+
 .toast {
     padding: 12px 16px;
     border-radius: 10px;
